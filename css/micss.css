@@ -1,0 +1,85 @@
+*,
+*::after
+*::before{
+    margin:0; 
+    padding:0;
+    top:0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url(https://allfont.es/allfont.css?fonts=bebas-neue);
+@import url(https://allfont.es/allfont.css?fonts=bowlby-one-sc);
+
+.header{
+    background-color: #6c3483;
+    height: auto;
+    position: fixed; /* Hacemos que la cabecera tenga una posición*/
+    width: 100%; /* hacemos que la cabecera ocupe el ancho completo de la página */
+	left: 0; 
+	top: 0; 
+}
+
+.headerGrid{
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-gap: 10px;
+        grid-auto-rows: minmax(70px, auto);
+}
+
+.logo {
+        grid-column: 1/ 4;
+        grid-row: 1;
+      }
+.texto {
+        grid-column: 4 /10;
+        grid-row: 1 ;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1rem;
+        color: #F5F5F5;
+      }
+
+.carrito {
+    grid-column: 11/12;
+    grid-row: 1 ;
+      }
+
+.whatsApp{
+    grid-column: 12/13;
+    grid-row: 1 ;
+      }
+   
+.img{
+    padding: 1rem;
+}
+
+.subtitulo{
+    font-family: 'bebas-neue', sans-serif;
+    font-size: 1rem;
+    color: #F5F5F5;
+    background-color: #E9967A;
+}
+
+nav a{
+    text-decoration:none;
+    color:inherit;
+    font-size:14px;
+    } 
+    nav ul{
+        padding: 0px 0px 0px 10px;
+        margin: 10px 0px 5px 0px;
+    
+    }
+    nav li{
+    display:inline-block;
+    width:10%;
+    padding:5px 10px;
+    background-color: #E9967A;
+    border:1px solid #E9967A;
+    text-align:center;
+    color:#fff;
+    }
+    nav li:hover{
+    background-color:#fff;
+    color:#000;
+    }

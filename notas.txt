@@ -1,0 +1,37 @@
+condicional verdadero y falso
+valor boleanos
+son palabras resevadas.
+
+if (true){}
+else{}
+
+if(1 == 1){
+
+}
+
+let numero= prompt('Ingrese numero')
+if (numero == 1){
+alert(numero+1)
+alert(Number(numero)+1)
+}
+
+
+=== compara valor y typo de variable
+
+
+Blanco #FFFFFF
+Humo blanco # F5F5F5
+Nieve #FFFAFA
+Gotas de miel # F0FFF0
+Mintcream # F5FFFA
+Azur # F0FFFF
+Alice azul # F0F8FF
+Ghostwhite # F8F8FF
+Concha # FFF5EE
+Beige # F5F5DC
+Oldlace # FDF5E6
+Floralwhite # FFFAF0
+Marfil # FFFFF0
+Blanco antiguo # FAEBD7
+Lino # FAF0E6
+Lavenderblush # FFF0F5
