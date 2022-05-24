@@ -71,8 +71,6 @@ for( letra=0;letra<cadena.length;letra++){
      }
 }
 console.log("Vocales: "+vocales);
-
-
 class camisa{
     constructor(codigo,talla,precio,moneda,stock){
         this.codigo=codigo;    
