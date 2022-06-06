@@ -84,3 +84,79 @@ nav a{
     background-color:#fff;
     color:#000;
     }
+
+
+   /* //////////  Coleccion card  */
+
+body {
+    font-family: Arial;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.flexColumna{
+    /*a*/
+    /*b*/
+    display: flex;
+    flex-direction: column; 
+    padding: 0px;
+    flex-wrap: wrap;
+    /* justify-content:space-around */
+}
+
+.flexRow{
+    /*a - b - c */
+    display: flex;
+    flex-direction: row; 
+    padding: 5px 5px 5px 5px;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* justify-content:space-around */
+}
+
+
+
+.cardContainer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    border: #6c3483;
+    margin-left: 30px;
+}
+
+.card {
+    width: 25%;
+    padding: 5px 10px 5px 10px;
+    border: 1px solid grey;
+    border-radius: 20px;
+}
+
+.cardImg {
+    width: 100%;
+}
+
+.cardPrice {
+    display: block;
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    
+}
+
+   .button {
+    margin: 10px 0;
+    background-color: #2271b3;
+    color: rgb(247, 247, 247);
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color:#0096d2;
+    box-shadow: 1px 1px 10px lightgrey;
+}
+   

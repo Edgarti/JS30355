@@ -125,80 +125,126 @@ const regex = /^[0-9]*$/;
 //+++++++++++++++++++++++++++++++++++++++++++++++++++/
 
 //definir array
-const tallas =[ 32,34,40]
-let coleccionTallas = ''
-console.log("tallas Iniciales:"+tallas);
+// const tallas =[ 32,34,40]
+// let coleccionTallas = ''
+// console.log("tallas Iniciales:"+tallas);
 
-let ti =prompt("Agregar tallas:");
-tallas.unshift(ti);
+// let ti =prompt("Agregar tallas:");
+// tallas.unshift(ti);
 
-for (let i=3; i<5; i++){
- let t =prompt("Agregar tallas:");
- tallas.push(t);
-}
+// for (let i=3; i<5; i++){
+//  let t =prompt("Agregar tallas:");
+//  tallas.push(t);
+// }
 
-let tf =prompt("Agregar tallas:");
-tallas.unshift(tf);
+// // let tf =prompt("Agregar tallas:");
+// // tallas.unshift(tf);
 
-console.log("tallas Finales:"+tallas);
-console.log(tallas);
-
-
+// // console.log("tallas Finales:"+tallas);
+// // console.log(tallas);
 
 
-// Objeto//
-console.log("Crear objetos camisa")
-const camisa = {
-    codigo:"C0001",
-    talla: 32,
-    precio:18,
-    modeda:"USD",
-    imagen: "",
-    promocion:"N"
 
-}
-console.log(camisa)
 
-const camisa02 = {
-    codigo:"C0002",
-    talla: 32,
-    precio:19,
-    modeda:"USD",
-    imagen: "",
-    promocion:"N"
+// // Objeto//
+// console.log("Crear objetos camisa")
+// const camisa = {
+//     codigo:"C0001",
+//     talla: 32,
+//     precio:18,
+//     modeda:"USD",
+//     imagen: "",
+//     promocion:"N"
 
-}
+// }
+// console.log(camisa)
 
-console.log("Referencia:"+camisa02.codigo+" Precio:"+camisa02.precio+" Stock:13")
+// const camisa02 = {
+//     codigo:"C0002",
+//     talla: 32,
+//     precio:19,
+//     modeda:"USD",
+//     imagen: "",
+//     promocion:"N"
 
-console.log("Actualizar precios")
-camisa02.precioenvio=1;
-camisa02.precio=20;
-console.log(camisa02)
+// }
 
-//lista de objectos
-console.log("Crear una lista de objectos camisas")
-const cami =[camisa,camisa02]
+// console.log("Referencia:"+camisa02.codigo+" Precio:"+camisa02.precio+" Stock:13")
 
-//recorrer la lista de objetos
-console.log("Recorrer una lista de objectos")
-cami.forEach(x=>{
-    console.log("Codigo: "+x.codigo);
-    console.log("talla: "+x.talla);
-    console.log("precio: "+x.precio);
-})
+// console.log("Actualizar precios")
+// camisa02.precioenvio=1;
+// camisa02.precio=20;
+// console.log(camisa02)
+
+// //lista de objectos
+// console.log("Crear una lista de objectos camisas")
+// const cami =[camisa,camisa02]
+
+// //recorrer la lista de objetos
+// console.log("Recorrer una lista de objectos")
+// cami.forEach(x=>{
+//     console.log("Codigo: "+x.codigo);
+//     console.log("talla: "+x.talla);
+//     console.log("precio: "+x.precio);
+// })
 
 // for(i=0 ; i<tallas.length; i++{
 //    for(j=1; j<tallas.length-1;j++){
 //       if (tallas)
 //    }
 // }
-
-
 //acceder y recorrer
-
-
-
 //Propiedades  y metos
 
 //combinacion array objectos
+//const jsonData= require('./camisa.json'); 
+
+class camisa{
+        constructor(codigo,talla,precio,moneda,stock,imagen,promocion){
+            this.codigo=codigo;    
+            this.talla= talla;
+            this.precio=precio;
+            this.moneda=moneda;
+            this.stock=stock;
+            this.imagen= imagen;
+            this.promocion=promocion
+        }
+        stocactual(){
+            console.log("Stock:"+camisa.stock)
+        } }
+
+const camisa01 = new camisa("C0001",32,18,"USD",10,"./imagen/camisa01.png","N")
+const camisa02 = new camisa("C0002",34,20,"USD",28,"./imagen/camisa02.png","N")
+const camisa03 = new camisa("C0003",36,22,"USD",5,"./imagen/camisa03.png","N")
+const camisa04 = new camisa("C0004",32,18,"USD",3,"./imagen/camisa04.png","S")
+const camisa05 = new camisa("C0005",34,20,"USD",23,"./imagen/camisa05.png","S")
+const camisa06 = new camisa("C0006",36,22,"USD",31,"./imagen/camisa06.png","S")
+                        
+const coleccion =[camisa01,camisa02,camisa03,camisa04,camisa05,camisa06]         
+
+const cardContainer = document.getElementById('cardContainer')
+
+console.log(coleccion)
+
+coleccion.forEach((coleccion) => {
+    const card = document.createElement('div')
+    card.className = 'card'
+    card.innerHTML = `
+            <h3 class="cardTitle"> REF.: ${coleccion.codigo} </h3>
+            <img src="${coleccion.imagen}" class="cardImg">
+            <p class="cardDesc"> ${coleccion.talla} Talla</p>
+            <span class="cardPrice">${coleccion.moneda} ${coleccion.precio} </span>
+            <button class="button">Agregar al Carrito</button>
+        `
+    cardContainer.append(card)
+})
+
+const collection = document.getElementsByClassName("cardPrice");
+for (let i = 0; i < collection.length; i++) {
+  collection[i].style.backgroundColor = "gray";
+  collection[i].style.color= "white";
+}
+
+
+
+
