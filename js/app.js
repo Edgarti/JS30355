@@ -234,7 +234,7 @@ coleccion.forEach((coleccion) => {
             <img src="${coleccion.imagen}" class="cardImg">
             <p class="cardDesc"> ${coleccion.talla} Talla</p>
             <span class="cardPrice">${coleccion.moneda} ${coleccion.precio} </span>
-            <button class="button">Agregar al Carrito</button>
+            <button id="${coleccion.codigo}" class="button">Agregar al Carrito</button>
         `
     cardContainer.append(card)
 })
@@ -245,6 +245,63 @@ for (let i = 0; i < collection.length; i++) {
   collection[i].style.color= "white";
 }
 
+const miCarrito=[];
+
+const totalCarrito = (Arr) =>{
+    let total =0;
+    Arr.forEach((articulo) =>{
+        total += articulo.precio
+    })
+    let html = document.querySelector('#totalCarrito');
+    html.innerHTML= "USD:"+total.toLocaleString();
+  
+    let numero =0;
+   
+    let htmlItem = document.querySelector('#itemCarrito');
+    htmlItem.innerHTML= Arr.length;
+ console.log("Array-------"+Arr.length)
+ 
+}
+
+const compra =(totalCarrito) => {
+    console.log("Pintar")
+}
+
+const codigoCamisa =(e)=>{
+  console.log(e.target.getAttribute("id"))
+  const camisaElegida = e.target.getAttribute("id")
+  const buscarElegida = coleccion.find((colecionCamisa) => colecionCamisa.codigo==camisaElegida)
+  miCarrito.push(buscarElegida)
+  totalCarrito(miCarrito)
+  localStorage.getItem("Carrito",miCarrito)
+  sessionStorage.getItem("ariculos",coleccion)
+  console.log(miCarrito)
+  const jsonlocal = JSON.stringify(miCarrito);
+localStorage.setItem("registroVenta",jsonlocal);
+const getlocalStorage = localStorage.getItem(registroVenta)
+console.log(getlocalStorage);
+}
+const botonAgregar = document.querySelectorAll('.button')
+
+botonAgregar.forEach((agregarCompra) =>{
+ agregarCompra.addEventListener('click',codigoCamisa)
+})
+
+localStorage.setItem("Token","abc123");
+sessionStorage.setItem("isDarkMode",true);
+
+
+const lstorage = localStorage.getItem("Token");
+const sStorage= sessionStorage.getItem("isDarkMode");
+
+console.log(lstorage);
+console.log(sStorage);
+
+for(let i=0; i< localStorage.length; i++){
+    let key = localStorage.key(i);
+    console.log("Variable:"+key+" valor:"+localStorage.getItem(key))
+
+}
 
 
 

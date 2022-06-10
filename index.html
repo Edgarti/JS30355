@@ -56,21 +56,31 @@
     </div> 
     <div class="flexRow">
         <div class="flexColumna" style="width:20%">
-            <div><p style="background-color:#6c3483; color: #ffffff; padding:5px" >Puños</p></div>     
+            <div><p style="background-color:#6c3483; color: #ffffff; padding:15px" >Puños</p></div>     
             <div><img src="./imagen/puyos.png" class="cardImg"></div>
             <div><p style="background-color:#6c3483; color: #ffffff;padding:5px" >Cuellos</p></div>     
             <div><img src="./imagen/Cuellos.png" class="cardImg"></div>
         </div>
         <div style="width: 60%"> 
-            <p style="background-color:#6c3483;color: #ffffff;padding:5px">Colección Verano</p>
+            <p style="background-color:#6c3483;color: #ffffff;padding:15px">Colección Verano</p>
             <div id="cardContainer" class="flexRow">
                 <!-- Codigo inyectado desde JS -->
             </div> 
         </div>
      
         <div class="flexColumna" style="width:20%;">
-            <div><p style="background-color:#6c3483; color: #ffffff; padding:5px" >Tallas</p></div>  
-           <div><img src="./imagen/Size.png" class="cardImg"></div>   
+            <div><p style="background-color:#6c3483; color: #ffffff; padding:15px" >Tallas</p></div>  
+           <div style="margin-top: 40px"><img src="./imagen/Size.png" class="cardImg"></div>  
+           <div style="margin-top: 30px"><p style="background-color:#6c3483; color: #ffffff; padding:5px" >Carrito de compras</p></div>
+           <div class="DatosCarrito">Total :
+            <span id="totalCarrito">0</span>
+            </div>
+           <div class="DatosCarrito">Item :
+            <span id="itemCarrito">0</span>
+           </div> 
+           <div style="margin-top:10px">
+           <button id="DetalleCarrito" class="button" style=" padding: 10px 50px;">Detalle Carrito</button>
+           </div>
         </div>
 
     </div>

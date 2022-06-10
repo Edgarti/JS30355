@@ -8,8 +8,8 @@
 }
 
 /* @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap'); */
-@import url(https://allfont.es/allfont.css?fonts=bebas-neue);
-@import url(https://allfont.es/allfont.css?fonts=bowlby-one-sc);
+/* @import url(https://allfont.es/allfont.css?fonts=bebas-neue);
+@import url(https://allfont.es/allfont.css?fonts=bowlby-one-sc); */
 
 .header{
     background-color: #6c3483;
@@ -120,14 +120,14 @@ body {
     display: flex;
     justify-content: center;
     width: 100%;
-    border: #6c3483;
+    border: #c1bec2;
     margin-left: 30px;
 }
 
 .card {
     width: 25%;
     padding: 5px 10px 5px 10px;
-    border: 1px solid grey;
+    border: 2px solid grey;
     border-radius: 20px;
 }
 
@@ -160,3 +160,16 @@ body {
     box-shadow: 1px 1px 10px lightgrey;
 }
    
+.DatosCarrito {
+   
+    font-family: 'Montserrat', sans-serif;
+    /* font-size: 1rem; */
+    color: #ffff;
+    font-weight: bold;
+    /* padding: 5px; */
+    margin: 2px 0px 2px 0px;
+    background-color: grey;
+    font-size: 20px;
+    font-weight: 600;
+    
+  }
