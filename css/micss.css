@@ -127,8 +127,10 @@ body {
 .card {
     width: 25%;
     padding: 5px 10px 5px 10px;
-    border: 2px solid grey;
+    border: 2px solid #c0c0c0;
     border-radius: 20px;
+    margin-right: 5px;
+    margin-bottom: 5px;
 }
 
 .cardImg {
@@ -159,7 +161,24 @@ body {
     background-color:#0096d2;
     box-shadow: 1px 1px 10px lightgrey;
 }
-   
+
+.BtoDetcar {
+    margin: 10px 0;
+    background-color: #2271b3;
+    color: rgb(247, 247, 247);
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.BtoDetcar:hover {
+    background-color:#0096d2;
+    box-shadow: 1px 1px 10px lightgrey;
+}
+
 .DatosCarrito {
    
     font-family: 'Montserrat', sans-serif;
@@ -173,3 +192,47 @@ body {
     font-weight: 600;
     
   }
+
+
+  .modal-container{
+    display: flex;
+    background-color: grey;
+    align-items: center;
+    justify-content:center;
+    pointer-events: none;
+    margin: 0px 0px ;
+    height: 100vh;
+    width: 100vh;
+  }
+
+  .modal{
+    background-color: #c0c0c0; ;
+    border-radius: 1ch;
+    box-shadow: 0 1px 1px ;
+    text-align: center;
+
+  }
+
+ .modal-container{
+    display: none;
+    align-items: center;
+    align-content: center;
+
+  } 
+
+  .Btopopup{
+    margin: 5px 0;
+    background-color: #2271b3;
+    color: rgb(247, 247, 247);
+    font-size: 14px;
+    font-weight: 500;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.Btopopup:hover {
+    background-color:#0096d2;
+    box-shadow: 1px 1px 10px lightgrey;
+}

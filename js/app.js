@@ -4,7 +4,7 @@ console.log(nombre + "-" + apellido)
 console.log("Desafio array y objectos")
 
 const regex = /^[0-9]*$/;
-// const onlyNumbers = regex.test(`34563`); 
+// const onlyNumbers = regex.test(`34563`);
 // // prompt,alert,console
 
 // console.log("Pasar valor pesos a dolareas")
@@ -74,7 +74,7 @@ const regex = /^[0-9]*$/;
 // console.log("Vocales: "+vocales);
 // class camisa{
 //     constructor(codigo,talla,precio,moneda,stock){
-//         this.codigo=codigo;    
+//         this.codigo=codigo;
 //         this.talla= talla;
 //         this.precio=precio;
 //         this.moneda=moneda;
@@ -82,7 +82,7 @@ const regex = /^[0-9]*$/;
 //     }
 //     stocactual(){
 //         console.log("Stock:"+camisa.stock)
-//     } 
+//     }
 // }
 
 // const addcamisaC0001 = new camisa("C0001","34",18,"USD",10)
@@ -197,7 +197,7 @@ const regex = /^[0-9]*$/;
 //Propiedades  y metos
 
 //combinacion array objectos
-//const jsonData= require('./camisa.json'); 
+//const jsonData= require('./camisa.json');
 
 class camisa {
     constructor(codigo, talla, precio, moneda, stock, imagen, promocion) {
@@ -270,6 +270,7 @@ const compra = (totalCarrito) => {
 
 // se ejecuta una vez click botom
 const codigoCamisa = (e) => {
+    console.log("Detalle del carrito");
     console.log(e.target.getAttribute("id"))
     const camisaElegida = e.target.getAttribute("id")
     const buscarElegida = coleccion.find((colecionCamisa) => colecionCamisa.codigo == camisaElegida)
@@ -310,15 +311,38 @@ for (let i = 0; i < localStorage.length; i++) {
 }
 
 //Detalle carrito
+const HtmlDetCar = document.getElementById('HtmldetalleCarrito')
 
-const consultaDetalle = () => {
+const consultaDetalle = (e) => {
+    var array = JSON.parse(localStorage.getItem("registroVenta"));
+    console.log(array)
+    coleccion.forEach((coleccion) => {
+    HtmlDetCar .innerHTML =   `
+            <div class="modal">
+             <P> sxfklajfka jsklsdajfkasñ aslkdfask
+             </p>
+             <button class="Btopopup" id="close">Cerrar</button>
+             </div>
+          
+         `
+    })
+    // console.log(e.target.getAttribute("id"))
 console.log("Consultar detalle carrito....")
+
 }
 
-const botonDetalleCarrito = document.querySelector('#btonDetalle')
+const botonDetalleCarrito = document.querySelector('.BtoDetcar')
 botonDetalleCarrito.addEventListener('click', consultaDetalle )
 
 
+const cerrar = (e) => {
+    console.log(e.target)
+} 
+
+const btocerrar = document.querySelector('.Btopopup')
+console.log("##### :"+btocerrar)
+
+btocerrar.addEventListener('click', cerrar)
 //botonDetalleCarrito.addEventListener('click', consultaDetalle)
 
 
