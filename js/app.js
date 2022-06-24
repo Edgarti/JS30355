@@ -311,7 +311,7 @@ for (let i = 0; i < localStorage.length; i++) {
 }
 
 //Detalle carrito
-const HtmlDetCar = document.getElementById('HtmldetalleCarrito')
+//const HtmlDetCar = document.getElementById('HtmldetalleCarrito')
 
 const consultaDetalle = (e) => {
     var array = JSON.parse(localStorage.getItem("registroVenta"));
@@ -328,11 +328,11 @@ const consultaDetalle = (e) => {
     })
     // console.log(e.target.getAttribute("id"))
 console.log("Consultar detalle carrito....")
-
 }
 
-const botonDetalleCarrito = document.querySelector('.BtoDetcar')
-botonDetalleCarrito.addEventListener('click', consultaDetalle )
+
+// const botonDetalleCarrito = document.querySelector('.BtoDetcar')
+// botonDetalleCarrito.addEventListener('click', consultaDetalle )
 
 
 const cerrar = (e) => {
@@ -342,7 +342,33 @@ const cerrar = (e) => {
 const btocerrar = document.querySelector('.Btopopup')
 console.log("##### :"+btocerrar)
 
-btocerrar.addEventListener('click', cerrar)
+// btocerrar.addEventListener('click', cerrar)
 //botonDetalleCarrito.addEventListener('click', consultaDetalle)
+
+//Incluir libreria sweetalert2
+
+document.querySelector('#BtoDetalleCarrito').addEventListener('click',() =>{
+    Swal.fire({
+        title: 'Buenas noches Matias, esta en desarrollo el detalle con la intención de tomarlo del localstorage',
+       
+        showClass: {
+          popup: 'animate__animated animate__fadeInDown'
+        },
+        hideClass: {
+          popup: 'animate__animated animate__fadeOutUp'
+        }
+      })
+} )
+
+document.querySelector('#BtoPop').addEventListener('click',() =>{
+    Swal.fire(
+        'Enhorabuena!',
+        'Su pedido quedo grabado con éxito!',
+        'success'
+      )
+      console.log("sweetttttttttttt")
+} )
+
+
 
 
