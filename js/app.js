@@ -283,8 +283,9 @@ const totalCarrito = (Arr) => {
 
     let htmlItem = document.querySelector('#itemCarrito');
     htmlItem.innerHTML = Arr.length;
-    console.log("Array-------" + Arr.length)
+    console.log("Articulos del Carrito: " + Arr.length)
 }
+
 
 const compra = (totalCarrito) => {
     console.log("Pintar")
@@ -316,6 +317,16 @@ botonAgregar.forEach((agregarCompra) => {
     agregarCompra.addEventListener('click', codigoCamisa)
 })
 
+const removelocalStorage = (e) => {
+    localStorage.removeItem('registroVenta');
+}
+const botonClear = document.querySelectorAll('#BtoClear')
+botonClear.forEach((clearlocalStorage) => {
+    clearlocalStorage.addEventListener('click', removelocalStorage)
+})
+
+
+
 //LocalStorage SessionStorage
 localStorage.setItem("Token", "abc123");
 sessionStorage.setItem("isDarkMode", true);
@@ -323,21 +334,40 @@ sessionStorage.setItem("isDarkMode", true);
 const lstorage = localStorage.getItem("Token");
 const sStorage = sessionStorage.getItem("isDarkMode");
 
-console.log(lstorage);
+
 console.log(sStorage);
 
+
+//REcorrer todas la variables del localStorage
 for (let i = 0; i < localStorage.length; i++) {
     let key = localStorage.key(i);
     console.log("Variable:" + key + " valor:" + localStorage.getItem(key))
+}
+
+let Local = localStorage.getItem('registroVenta')
+if (Local != null){
+   
+    var array = []
+    array = JSON.parse(localStorage.getItem('registroVenta'));
+    let total = 0;
+    array.forEach((articulo) => {
+        total += articulo.precio
+    })
+    let html = document.querySelector('#totalCarrito');
+    html.innerHTML = total.toLocaleString() + " USD" ;
+
+    let numero = 0;
+
+    let htmlItem = document.querySelector('#itemCarrito');
+    htmlItem.innerHTML = array.length;
 }
 
 //Detalle carrito
 //const HtmlDetCar = document.getElementById('HtmldetalleCarrito')
 
 const consultaDetalle = (e) => {
-    var array = json.stringify(localStorage.getItem("registroVenta"));
-    console.log("linea 314 :"+array)
-    array .forEach((array) => {
+    var array = JSON.parse(localStorage.getItem('registroVenta'));
+    array.forEach((array) => {
         innerHTML =   `
             <div class="modal">
              <P> sxfklajfka jsklsdajfkasñ aslkdfask
@@ -358,8 +388,8 @@ const cerrar = (e) => {
     console.log(e.target)
 } 
 
-const btocerrar = document.querySelector('.Btopopup')
-console.log("##### :"+btocerrar)
+// const btocerrar = document.querySelector('.Btopopup')
+// console.log("##### :"+btocerrar)
 
 // btocerrar.addEventListener('click', cerrar)
 //botonDetalleCarrito.addEventListener('click', consultaDetalle)
