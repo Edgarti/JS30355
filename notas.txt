@@ -35,3 +35,24 @@ Marfil # FFFFF0
 Blanco antiguo # FAEBD7
 Lino # FAF0E6
 Lavenderblush # FFF0F5
+
+
+
+==================
+solucion CORS
+==================
+
+Access to fetch at 'file:///D:/data/productos.json' from origin 'null' has been blocked by CORS policy: Cross origin requests are only 
+supported for protocol schemes: http, data, chrome, chrome-extension, chrome-untrusted, https.
+
+
+Nodo.js
+Alternativamente, si exige una configuración más receptiva y ya usa nodejs...
+
+Instalar http-serverescribiendonpm install -g http-server
+
+Cambie a su directorio de trabajo, donde some.htmlvive
+
+Inicie su servidor http emitiendohttp-server -c-1
+
+Esto activa un httpd de Node.js que sirve los archivos en su directorio como archivos estáticos accesibles desdehttp://localhost:8080

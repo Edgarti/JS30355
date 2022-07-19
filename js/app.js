@@ -227,6 +227,29 @@ const cardContainer = document.getElementById('cardContainer')
 
 console.log(coleccion)
 
+ function funcionAsincrona(){
+    fetch('./productos.json').then(response => {
+        return response.json();
+      }).then(data => {
+        // Work with JSON data here
+        console.log(data);
+      }).catch(err => {
+        // Do something for an error here
+      });
+
+ 
+    
+}
+
+// fetch('../data/productos.json')
+// .then((response) => response.json())
+// .then((data) => console.log(data))
+
+
+// const  respuesta = await fetch('productos.json')
+//  .then (response => response.json())
+//  .then (json => console.log("Fetch: "+json))
+
 coleccion.forEach((coleccion) => {
     const card = document.createElement('div')
     card.className = 'card'
@@ -254,14 +277,13 @@ const totalCarrito = (Arr) => {
         total += articulo.precio
     })
     let html = document.querySelector('#totalCarrito');
-    html.innerHTML = "USD:" + total.toLocaleString();
+    html.innerHTML = total.toLocaleString() + " USD" ;
 
     let numero = 0;
 
     let htmlItem = document.querySelector('#itemCarrito');
     htmlItem.innerHTML = Arr.length;
     console.log("Array-------" + Arr.length)
-
 }
 
 const compra = (totalCarrito) => {
@@ -282,9 +304,9 @@ const codigoCamisa = (e) => {
     console.log(miCarrito)
 
     const jsonlocal = JSON.stringify(miCarrito);
-    localStorage.setItem("registroVenta", jsonlocal);
+    localStorage.setItem('registroVenta', jsonlocal);
 
-    const getlocalStorage = localStorage.getItem(registroVenta)
+    const getlocalStorage = localStorage.getItem('registroVenta')
     console.log(getlocalStorage);
 }
 
@@ -297,7 +319,6 @@ botonAgregar.forEach((agregarCompra) => {
 //LocalStorage SessionStorage
 localStorage.setItem("Token", "abc123");
 sessionStorage.setItem("isDarkMode", true);
-
 
 const lstorage = localStorage.getItem("Token");
 const sStorage = sessionStorage.getItem("isDarkMode");
@@ -314,10 +335,10 @@ for (let i = 0; i < localStorage.length; i++) {
 //const HtmlDetCar = document.getElementById('HtmldetalleCarrito')
 
 const consultaDetalle = (e) => {
-    var array = JSON.parse(localStorage.getItem("registroVenta"));
-    console.log(array)
-    coleccion.forEach((coleccion) => {
-    HtmlDetCar .innerHTML =   `
+    var array = json.stringify(localStorage.getItem("registroVenta"));
+    console.log("linea 314 :"+array)
+    array .forEach((array) => {
+        innerHTML =   `
             <div class="modal">
              <P> sxfklajfka jsklsdajfkasñ aslkdfask
              </p>
@@ -330,10 +351,8 @@ const consultaDetalle = (e) => {
 console.log("Consultar detalle carrito....")
 }
 
-
 // const botonDetalleCarrito = document.querySelector('.BtoDetcar')
 // botonDetalleCarrito.addEventListener('click', consultaDetalle )
-
 
 const cerrar = (e) => {
     console.log(e.target)
@@ -348,16 +367,7 @@ console.log("##### :"+btocerrar)
 //Incluir libreria sweetalert2
 
 document.querySelector('#BtoDetalleCarrito').addEventListener('click',() =>{
-    Swal.fire({
-        title: 'Buenas noches Matias, esta en desarrollo el detalle con la intención de tomarlo del localstorage',
-       
-        showClass: {
-          popup: 'animate__animated animate__fadeInDown'
-        },
-        hideClass: {
-          popup: 'animate__animated animate__fadeOutUp'
-        }
-      })
+   consultaDetalle()
 } )
 
 document.querySelector('#BtoPop').addEventListener('click',() =>{
@@ -366,7 +376,6 @@ document.querySelector('#BtoPop').addEventListener('click',() =>{
         'Su pedido quedo grabado con éxito!',
         'success'
       )
-      console.log("sweetttttttttttt")
 } )
 
 

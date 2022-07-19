@@ -1,0 +1,23 @@
+{
+  "name": "30355js",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u00003\u00000\u00003\u00005\u00005\u0000\r\u0000 \u0000",
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Edgarti/JS30355.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Edgarti/JS30355/issues"
+  },
+  "homepage": "https://github.com/Edgarti/JS30355#readme"
+}

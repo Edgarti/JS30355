@@ -1,0 +1,73 @@
+[
+  {
+	"codigo": "C0001",
+	"talla": 32,
+	"precio": 18,
+	"moneda": "USD",
+	"stock": "10",
+	"imagen": "./imagen/camisa01.png",
+	"promocion": "SI"
+ },
+ {
+	"codigo": "C0001",
+	"talla": 32,
+	"precio": 18,
+	"moneda": "USD",
+	"stock": "10",
+	"imagen": "./imagen/camisa01.png",
+	"promocion": "SI"
+ },
+ {
+	"codigo": "C0001",
+	"talla": 32,
+	"precio": 18,
+	"moneda": "USD",
+	"stock": "10",
+	"imagen": "./imagen/camisa02.png",
+	"promocion": "SI"
+ },
+ {
+	"codigo": "C0002",
+	"talla": 32,
+	"precio": 18,
+	"moneda": "USD",
+	"stock": "10",
+	"imagen": "./imagen/camisa03.png",
+	"promocion": "SI"
+ },{
+	"codigo": "C0003",
+	"talla": 32,
+	"precio": 18,
+	"moneda": "USD",
+	"stock": "10",
+	"imagen": "./imagen/camisa01.png",
+	"promocion": "SI"
+ },
+ {
+	"codigo": "C0004",
+	"talla": 32,
+	"precio": 18,
+	"moneda": "USD",
+	"stock": "10",
+	"imagen": "./imagen/camisa04.png",
+	"promocion": "SI"
+ },
+ {
+	"codigo": "C0005",
+	"talla": 32,
+	"precio": 18,
+	"moneda": "USD",
+	"stock": "10",
+	"imagen": "./imagen/camisa05.png",
+	"promocion": "SI"
+ },
+ {
+	"codigo": "C0006",
+	"talla": 32,
+	"precio": 18,
+	"moneda": "USD",
+	"stock": "10",
+	"imagen": "./imagen/camisa06.png",
+	"promocion": "SI"
+ }
+]
